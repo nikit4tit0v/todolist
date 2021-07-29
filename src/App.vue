@@ -1,16 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <AddTodo />
+  <Todos />
+  <TodosFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import AddTodo from "@/components/AddTodo.vue";
+import Todos from "@/components/Todos.vue";
+import TodosFooter from "@/components/TodosFooter.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    AddTodo,
+    Todos,
+    TodosFooter,
   },
 });
 </script>
@@ -23,5 +28,8 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 </style>
